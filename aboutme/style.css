@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #00162b;
+}
+
+#wrapper{
+    background-color: var(--background-color);
+    height: 100vh;
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+    border: 1px solid coral;
+}
+
+.container{
+    border: 1px solid coral;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: blanchedalmond;
+    position: relative;   
+    z-index: 1;
+}
+
+.heading h1{
+    margin: 1em;
+    user-select: none;
+    font-size: 2.5em;
+
+    /* border-bottom: 1px solid blanchedalmond; */
+}
+
+.new{
+    border: 2px solid blanchedalmond;
+    position: absolute;
+    margin-top: -18em;
+    width: 80%;
+
+}
+
+.image-container img{
+    border: 3px solid blanchedalmond;
+    height: 40vh;
+
+    user-select: none;
+}
+
+.about-me{
+    margin: 0 20em;
+    margin-top: 2em;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

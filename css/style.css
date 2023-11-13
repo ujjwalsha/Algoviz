@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #00162b;
+    --font-color: blanchedalmond;
+}
+
+
+#wrapper{
+    position: relative;
+    /* border: 1px solid coral; */
+    background-color: var(--background-color);
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    height: 100vh;
+    color: blanchedalmond;
+}
+
+.video-container{
+    /* position: relative;   */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+.video-container video{
+    /* filter: grayscale(30%); */
+    opacity: 0.3;
+    position: relative;
+    width: 100vw;
+    /* transform: translate(-50%, -50%); */
+    /* color: #5d74ba; */
+    height: 100vh;
+    background: #5d74ba;
+    /* height: 100%; */
+    object-fit: fill;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.content{
+    /* z-index: 1; */
+    position: absolute;
+    bottom: 50%;
+    /* left: 12%; */
+    margin: 0 10%;
+    /* border: 1px solid coral; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: #5d74ba; */
+}
+
+.content h1{
+    font-size: 5em;
+    user-select: none;
+    text-align: center;
+}
+
+.content p{
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+}   
+
+
+
+.nav-bar{
+    margin: 1em;
+    position: absolute;
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-container h2{
+    font-size: 2em;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    border-top: 2px solid blanchedalmond;
+    border-bottom: 2px solid blanchedalmond;
+}
+
+.nav-items{
+    /* border: 1px solid coral; */
+    display: flex;
+    gap: 3em;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: blanchedalmond;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.nav-items a:hover{
+    border: 1px solid blanchedalmond;
+    background-color: blanchedalmond;
+    color: var(--background-color);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
