@@ -93,7 +93,7 @@ button:hover{
 }
 
 #bars{
-    border: 1px solid coral;
+    border-top: 2px solid coral;
     display: flex;
     justify-content: center;
     gap: 0.3em;
