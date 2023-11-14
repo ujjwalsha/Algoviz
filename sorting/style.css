@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --background-color: #00162b;
+    --font-color: blanchedalmond;
+}
+
+
+#wrapper{
+    /* position: relative; */
+    /* border: 1px solid coral; */
+    background-color: var(--background-color);
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+    /* display: flex; */
+    height: 100vh;
+    color: blanchedalmond;
+}
+
+
+.nav-bar {
+    margin: 1em 5em;
+    border-bottom: 3px solid blanchedalmond;
+}
+
+.nav-bar h2{
+    letter-spacing: 0.15em;
+    font-size: 2em;
+}
+
+.container{
+    /* border: 1px solid coral; */
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 5em;
+}
+
+.sort{
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+ button{
+    padding: 0.7em;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: blanchedalmond;
+    border-radius: 0.5em;
+    border: none;
+    /* transition: all 0.1s ease; */
+}
+
+button:hover{
+    background-color: rgb(250, 189, 99);
+    transform: translateZ(10%);
+}
+
+.col{
+    /* border: 1px solid coral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#size{
+    font-weight: bold;
+    font-size: 1.2em;
+    /* border: 1px solid coral; */
+    display: flex;
+    gap: 1em;
+
+    align-items: center;
+}
+
+
+#speed{
+    font-weight: bold;
+    font-size: 1.2em;
+    /* border: 1px solid coral; */
+    display: flex;
+    gap: 1em;
+
+    align-items: center;
+}
+
+#bars{
+    border: 1px solid coral;
+    display: flex;
+    justify-content: center;
+    gap: 0.3em;
+
+
+}
+
+.sortBars{
+    background-color: aqua;
+    border: 1px solid coral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

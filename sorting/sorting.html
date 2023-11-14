@@ -5,32 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoviz</title>
 
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        :root{
-            --backgroud-color: #00162b;
-        }
-
-
-        #wrapper{
-            background-color: var(--backgroud-color);
-            height: 100vh;
-            color: blanchedalmond;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <div id="wrapper">
-        <h1>this is ujjwal kumar</h1>
+        <div class="nav-bar">
+            <h2>Sorting Visualizer</h2>
+        </div>
+
+        <div class="container">
+            <div class="newArray">
+                <button onclick="createArray()">New Array</button>
+            </div>
+
+            <div class="col">
+                <span id="size">Size
+                    <input id="input" type="range"  min="5" max="100" step="1" value="0">
+                    <div class="result">100</div>
+                </span>
+
+                <span id="speed">Speed
+                    <input id="range"  type="range" min="20" max="300" stepDown="10" value="0">
+                    <div class="resultSpeed">300</div>
+                </span>
+            </div>
+
+            <div class="sort">
+                <div class="bubbleSort">
+                    <button onclick="bubbleSort()">Bubble</button>
+
+                </div>
+    
+                <div class="insertionSort">
+                    <button onclick="insertionSort()">Insertion</button>
+                </div>
+    
+                <div class="selectionSort">
+                    <button onclick="selectionSort()">Selection</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div id="bars" class="flex-container">
+            <svg width="50" height="200.7" class="sortBars black"></svg>
+            <svg width="50" height="400.7" class="sortBars black"></svg>
+            <svg width="50" height="273.7" class="sortBars black"></svg>
+            <svg width="50" height="300.7" class="sortBars black"></svg>
+            <svg width="50" height="100.7" class="sortBars black"></svg>
+            <svg width="50" height="200.7" class="sortBars black"></svg>
+            <svg width="50" height="60.7" class="sortBars black"></svg>
+            <svg width="50" height="50.7" class="sortBars black"></svg>
+
+        </div>
+
+
     </div>
+
+    <script src="app.js"></script>
 
 </body>
 </html>

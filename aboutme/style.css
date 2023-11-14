@@ -13,13 +13,13 @@
     height: 100vh;
     font-family: 'poppins', sans-serif;
     overflow-x: hidden;
-    border: 1px solid coral;
+    /* border: 1px solid coral; */
 }
 
 .container{
-    border: 1px solid coral;
+    /* border: 1px solid coral; */
     display: flex;
-    height: 70%;
+    height: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -39,13 +39,13 @@
 .new{
     border: 2px solid blanchedalmond;
     position: absolute;
-    margin-top: -18em;
+    margin-top: -21em;
     width: 80%;
 
 }
 
 .image-container img{
-    border: 3px solid blanchedalmond;
+    /* border: 3px solid blanchedalmond; */
     height: 40vh;
 
     user-select: none;
@@ -58,8 +58,40 @@
     /* border: 1px solid red; */
 }
 
+.about-me p{
+    font-size: 1.5em;
+}
+
+#first{
+    font-size: 2em;
+}
+
+.name{
+    color: yellow;
+}
 
 
+/* link container */
+
+.link-container{
+    /* border: 1px solid red; */
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a{
+    font-size: 2em;
+    margin: 0.5em;
+    color: blanchedalmond;
+    /* border: 1px solid red; */
+    gap: 2em;
+}
+
+.links a:hover{
+    color: rgb(130, 104, 65);
+}
 
 
 

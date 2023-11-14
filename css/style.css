@@ -52,6 +52,8 @@
     /* z-index: 1; */
     position: absolute;
     bottom: 50%;
+    top: 50%;
+    /* width: 90vw; */
     /* left: 12%; */
     margin: 0 10%;
     /* border: 1px solid coral; */
@@ -60,16 +62,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2em;
     /* background: #5d74ba; */
 }
 
 .content h1{
-    font-size: 5em;
+    font-size: 3.5em;
     user-select: none;
-    text-align: center;
+    text-align: start;
 }
 
+
 .content p{
+    font-size: 1.3em;
     text-align: center;
     font-family: 'poppins', sans-serif;
     cursor: pointer;
