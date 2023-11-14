@@ -9,7 +9,6 @@
 
         mySlider.addEventListener("input", () =>{
             value.innerText = mySlider.value;
-            bar.
             // console.log(value.innerText);
         });
 
