@@ -96,6 +96,7 @@
 .logo-container h2{
     font-size: 2em;
     cursor: pointer;
+    user-select: none;
     letter-spacing: 0.2em;
     border-top: 2px solid blanchedalmond;
     border-bottom: 2px solid blanchedalmond;
@@ -111,6 +112,7 @@
     text-decoration: none;
     color: blanchedalmond;
     padding: 0.5em;
+    user-select: none;
     font-weight: bold;
 }
 
