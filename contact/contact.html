@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Algoviz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="wrapper">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="text" id="email" placeholder="your Gmail address" required>
+                <input type="text" id="phone" placeholder="phone number" required>
+                <textarea name="" id="message" cols="30" rows="10" placeholder="How can i help you ......."></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+         
+
+        </div>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "ujjwalunforgettable@gmail.com",
+    Password : "ujjwal@llen",
+    To : 'ujjwalkumararch@gmail.com',
+    From : document.getElementById('email').value,
+    Subject : " New contact form enquiry",
+    Body : "And this is the body"
+    }).then(
+    message => alert("send successfully!")
+    );
+
+        }
+
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #00162b;
+    --font-color: blanchedalmond;
+}
+
+
+#wrapper{
+    position: relative;
+    /* border: 1px solid coral; */
+    background-color: var(--background-color);
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: blanchedalmond;
+}
+
+.container{
+    /* border: 1px solid coral; */
+    display: flex;
+    /* gap: 1em; */
+    margin-top: 2em;
+    width: 50%;
+
+    flex-direction: column;
+
+    @media screen and (max-width:480px) {
+        width: 100%;
+    }
+
+}
+
+.container h2{
+    font-size: 3em;
+    text-align: center;
+    /* border: 1px solid coral; */
+
+    @media screen and (max-width: 480px){
+        font-size: 2.5em;
+    }
+
+}
+
+
+form{
+     border: 1px solid blanchedalmond;
+     display: flex;
+     padding: 1em;
+     margin-bottom: 50%;
+     border-radius: 1em;
+     
+    margin: 5% 15%;
+    gap: 1em;
+    flex-direction: column;
+    @media screen and (max-width: 480px){
+        margin: 10% 5%;
+    }
+}
+
+form input{
+    background-color: blanchedalmond;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    border: none;           
+    
+    @media screen and (max-width: 480px){
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+}
+
+form textarea{
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: blanchedalmond;
+    border-radius: 1em; 
+    padding: 1em;  
+    
+    @media screen and (max-width: 480px){
+        font-size: 1em;
+        font-weight: bold;
+    }
+    
+}
+
+
+
+.container button{
+    font-size:  1.3em;
+    width: 5em;
+    margin: 0 auto; 
+    background-color: blanchedalmond;
+    font-weight: bold;
+    padding: 0.5em;
+    border: none;
+    border-radius: 1em;
+
+    @media screen and (max-width: 480px){
+        font-size: 1em;
+        padding: 0.6em;        
+    }
+   
+    
+}
+
+
+.container button:hover{
+    background-color: rgb(253, 175, 58);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
