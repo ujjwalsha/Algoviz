@@ -10,6 +10,7 @@ let block = document.querySelector('.sortBars');
 let containerBox = document.querySelector('.flex-container');
 let randomArray = document.getElementById('random-array');
 let sort_btn = document.getElementById("bubble-sort");
+let insert_btn = document.getElementById('insertion-sort');
 
 
 
@@ -86,47 +87,7 @@ function sleep(ms){
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-//bubble sort
 
-async function bubbleSort(array){
-    let bars = document.getElementsByClassName('bar');
-    for(let i = 0; i < array.length; i++)
-    {
-        for(let j = 0; j <= array.length - i -1; j++)
-        {
-            if(array[j] > array[j+1])
-            {
-                for(let k = 0; k < bars.length; k++){
-                    if(k != j+1)
-                    {
-                        bars[k].style.backgroundColor = "#00162b";
-                    }
-                }
-
-                let temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-
-                bars[j].style.height = array[j]*20 + "px";
-                // bars[j].style.backgroundColor = "blanchedalmond";
-                bars[j].innerHTML = array[j];
-                bars[j].style.color = "blanchedalmond";
-                // bars[j].innerHTML.style.color = "black";
-
-                bars[j+1].style.height = array[j+1]*20 + "px";
-                bars[j+1].style.backgroundColor = "aqua";
-                bars[j+1].innerHTML = array[j+1];
-                // bars[j+1].style.color = "black";
-
-                await sleep(100);
-            }
-        
-        }
-        await sleep(100);
-         
-    }
-    return array;
-}
 
 sort_btn.addEventListener("click", function(array){
     let sorted_array = bubbleSort(unsorted_array);
@@ -134,7 +95,10 @@ sort_btn.addEventListener("click", function(array){
     
 });
 
-
+insert_btn.addEventListener("click", function(array){
+    let sorted_array = selectionSort(unsorted_array);
+    console.log(sorted_array);
+});
 
 
 
