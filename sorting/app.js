@@ -54,7 +54,6 @@ function createRandomArray(){
         unsorted_array[i] = randomNum(min, max);
     }
 }
-
 // render the bars on the display
 function renderBars(array){
     // let size = mySlider.value;
@@ -64,15 +63,15 @@ function renderBars(array){
         bar.classList.add("bar");
         bar.style.width = "2em";
         bar.innerHTML = array[i];
-        bar.style.cssText = " color: black; padding: 0.5em; font-size:2em; "
-        bar.style.backgroundColor = "aqua";
-        bar.style.border = "1px solid blanchedalmond";
+        bar.style.cssText = "color: blanchedalmond; padding: 0.5em; font-size:2em; transition: height 0.6s ease-in-out;";
+        bar.style.border = "2px solid blanchedalmond";
         bar.style.height = array[i]*25 + "px";
         containerBox.appendChild(bar);
-        // array.length = mySlider.value;
     }    
+    // array.length = mySlider.value;
+    
 
-   
+    
 }
 
 // create event on clicking new array button
@@ -83,17 +82,27 @@ randomArray.addEventListener("click", function(array){
 });
 
 
+function sleep(ms){
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 //bubble sort
 
-function bubbleSort(array){
+async function bubbleSort(array){
     let bars = document.getElementsByClassName('bar');
-
     for(let i = 0; i < array.length; i++)
     {
         for(let j = 0; j <= array.length - i -1; j++)
         {
             if(array[j] > array[j+1])
             {
+                // for(let k = 0; k < bars.length; k++){
+                //     if(k != j && k != j+1)
+                //     {
+                //         bars[k].style.backgroundColor = "#00162b";
+                //     }
+                // }
+
                 let temp = array[j];
                 array[j] = array[j+1];
                 array[j+1] = temp;
@@ -101,12 +110,17 @@ function bubbleSort(array){
                 bars[j].style.height = array[j]*20 + "px";
                 bars[j].style.backgroundColor = "blanchedalmond";
                 bars[j].innerHTML = array[j];
-
+                bars[j].style.color = "black";
                 bars[j+1].style.height = array[j+1]*20 + "px";
                 bars[j+1].style.backgroundColor = "blanchedalmond";
                 bars[j+1].innerHTML = array[j+1];
+                bars[j+1].style.color = "black";
+
+                await sleep(30);
             }
         }
+        await sleep(30);
+         
     }
     return array;
 }
