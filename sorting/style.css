@@ -61,6 +61,7 @@
 button:hover{
     background-color: rgb(250, 189, 99);
     transform: translateZ(10%);
+    transform: scale(0.98);
 }
 
 .col{

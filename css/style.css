@@ -43,7 +43,7 @@
     height: 100vh;
     background: #5d74ba;
     /* height: 100%; */
-    object-fit: fill;
+    object-fit: cover;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -120,6 +120,56 @@
     border: 1px solid blanchedalmond;
     background-color: blanchedalmond;
     color: var(--background-color);
+}
+
+
+/* responsive app for mobile version */
+
+@media screen and (max-width: 480px){
+
+    #wrapper{
+        border: 1px solid red;
+    
+    }
+    
+    .logo-container h2{
+        font-size: 1.6em;
+    }
+
+    .logo-container{
+        margin-top: -40em;
+    }
+
+
+    .nav-items{
+        display: flex;
+        flex-direction: column;
+        background: rgb(51, 86, 97);
+        justify-content: right;
+        padding: 3em;
+        margin-top: -1em;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .content{
+        margin-top: 2em;
+    }
+
+    .content h1{
+        font-size: 2.6em;
+        /* text-decoration: underline; */
+        padding: 0;
+    }
+
+    .content p{
+        text-decoration: underline;
+    
+        text-align: start;
+        user-select: none;
+        font-size: 1.2em;
+    }
+
 
 }
 

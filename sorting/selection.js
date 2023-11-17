@@ -18,9 +18,7 @@ function selectionSort(array){
 
         bars[i].style.height = array[i]*20 + "px";
         bars[i].innerHTML = array[i];
-        bars[i].style.color = "blanchedalmond";
-
-             
+        bars[i].style.color = "blanchedalmond";            
 
     }
 

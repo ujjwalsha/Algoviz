@@ -91,6 +91,7 @@
 
 .links a:hover{
     color: rgb(130, 104, 65);
+    transform: scale(0.98);
 }
 
 
