@@ -96,38 +96,37 @@ async function bubbleSort(array){
         {
             if(array[j] > array[j+1])
             {
-                // for(let k = 0; k < bars.length; k++){
-                //     if(k != j && k != j+1)
-                //     {
-                //         bars[k].style.backgroundColor = "#00162b";
-                //     }
-                // }
+                for(let k = 0; k < bars.length; k++){
+                    if(k != j+1)
+                    {
+                        bars[k].style.backgroundColor = "#00162b";
+                    }
+                }
 
                 let temp = array[j];
                 array[j] = array[j+1];
                 array[j+1] = temp;
 
                 bars[j].style.height = array[j]*20 + "px";
-                bars[j].style.backgroundColor = "blanchedalmond";
+                // bars[j].style.backgroundColor = "blanchedalmond";
                 bars[j].innerHTML = array[j];
-                bars[j].style.color = "black";
-                bars[j+1].style.height = array[j+1]*20 + "px";
-                bars[j+1].style.backgroundColor = "blanchedalmond";
-                bars[j+1].innerHTML = array[j+1];
-                bars[j+1].style.color = "black";
+                bars[j].style.color = "blanchedalmond";
+                // bars[j].innerHTML.style.color = "black";
 
-                await sleep(30);
+                bars[j+1].style.height = array[j+1]*20 + "px";
+                bars[j+1].style.backgroundColor = "aqua";
+                bars[j+1].innerHTML = array[j+1];
+                // bars[j+1].style.color = "black";
+
+                await sleep(100);
             }
+        
         }
-        await sleep(30);
+        await sleep(100);
          
     }
     return array;
 }
-
-
-
-
 
 sort_btn.addEventListener("click", function(array){
     let sorted_array = bubbleSort(unsorted_array);
