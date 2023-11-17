@@ -9,8 +9,8 @@ let value1 = document.querySelector(".resultSpeed");
 let block = document.querySelector('.sortBars');
 let containerBox = document.querySelector('.flex-container');
 let randomArray = document.getElementById('random-array');
-let sort_btn = document.getElementById("bubble-sort");
-let insert_btn = document.getElementById('insertion-sort');
+let bubble_btn = document.getElementById("bubble-sort");
+let selection_btn = document.getElementById('selection-sort');
 
 
 
@@ -88,14 +88,13 @@ function sleep(ms){
 }
 
 
-
-sort_btn.addEventListener("click", function(array){
+bubble_btn.addEventListener("click", function(array){
     let sorted_array = bubbleSort(unsorted_array);
     console.log(sorted_array);
     
 });
 
-insert_btn.addEventListener("click", function(array){
+selection_btn.addEventListener("click", function(array){
     let sorted_array = selectionSort(unsorted_array);
     console.log(sorted_array);
 });
