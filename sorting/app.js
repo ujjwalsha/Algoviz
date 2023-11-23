@@ -88,17 +88,17 @@ function sleep(ms){
 }
 
 
+
+
 bubble_btn.addEventListener("click", function(array){
     let sorted_array = bubbleSort(unsorted_array);
     console.log(sorted_array);
     
 });
-
 selection_btn.addEventListener("click", function(array){
     let sorted_array = selectionSort(unsorted_array);
     console.log(sorted_array);
 });
-
 
 
 

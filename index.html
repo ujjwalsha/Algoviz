@@ -27,7 +27,11 @@
                 <h2>Vrittiviz</h2>
             </div>
 
-            <div class="nav-items">
+            <div class="toggle_btn" onclick="open()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-items" class="sideBar">
                 <a href="index.html">Home</a>
                 <a href="sorting/sorting.html">Sorting</a>
                 <a href="aboutme/aboutme.html">About me</a>
@@ -40,6 +44,7 @@
     <!-- <a href="sorting.html">click here</a> -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
+
         //for typing heading
 var typed = new Typed(".sec-text", {
     strings: ["Algorithm Visualizer", "creativity", "Programming"],
@@ -47,6 +52,9 @@ var typed = new Typed(".sec-text", {
     backSpeed: 100,
     loop: true
 });
+ 
+    // let navToggle = document.querySelector('.toggle_btn');
+    // let nav = document.querySelector('.nav-ite
 
     </script>
 
