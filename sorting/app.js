@@ -96,7 +96,7 @@ bubble_btn.addEventListener("click", function(array){
     
 });
 selection_btn.addEventListener("click", function(array){
-    let sorted_array = selectionSort(unsorted_array);
+    selectionSort(unsorted_array);
     console.log(sorted_array);
 });
 

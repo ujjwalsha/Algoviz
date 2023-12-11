@@ -108,6 +108,26 @@ button:hover{
 }
 
 
+@media screen and (max-width:480px) {
+    
+    #wrapper{
+        border: 1px solid coral;
+    }
+
+    .nav-bar{
+      
+    }
+
+    .nav-bar h2{
+        width: 120%;
+        border: 1px solid coral;
+        font-size: 1em;
+        padding: 1em;
+        text-align: center;
+    }
+
+}
+
 
 
 
