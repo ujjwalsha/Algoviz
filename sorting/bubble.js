@@ -1,4 +1,5 @@
 async function bubbleSort(array){
+    disable_input();
     let bars = document.getElementsByClassName('bar');
     for(let i = 0; i < array.length; i++)
     {
@@ -35,5 +36,8 @@ async function bubbleSort(array){
         await sleep(30);
          
     }
+enable_input();
+
     return array;
 }
+

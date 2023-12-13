@@ -11,6 +11,8 @@ let containerBox = document.querySelector('.flex-container');
 let randomArray = document.getElementById('random-array');
 let bubble_btn = document.getElementById("bubble-sort");
 let selection_btn = document.getElementById('selection-sort');
+let insertion_btn = document.getElementById('insertion-sort');
+// let delayElement = document.querySelector("#speed_input");
 
 
 
@@ -34,12 +36,12 @@ mySlider.addEventListener("input", () => {
 
 // console.log("size of the array " +unsorted_array.length);
 
-
-
-mySlider2.addEventListener("input", () => {
-    value1.innerText = mySlider2.value;
-
-});
+// function swap(x, y)
+// {
+//     let temp = x.style.height;
+//     x.style.height = y.style.height;
+//     y.style.height = temp;
+// }
 
 //generate random number
 function randomNum(min, max){
@@ -88,6 +90,39 @@ function sleep(ms){
 }
 
 
+function disable_input(){
+    let x = document.getElementsByTagName('input');
+    for(let i = 0; i < x.length; i++)
+    {
+        x[i].disabled = true;
+    }
+}
+
+
+function enable_input(){
+    let x = document.getElementsByTagName('input');
+    for(let i = 0; i < x.length; i++)
+    {
+        x[i].disabled = false;
+    }
+}
+
+
+
+function waitforme(millisec) { 
+    return new Promise(resolve => { 
+        setTimeout(() => { resolve('') }, millisec); 
+    }) 
+} 
+
+let delay = 100;
+
+
+mySlider2.addEventListener("input", () => {
+    value1.innerText = mySlider2.value;
+    delay = 320 - parseInt(mySlider2.value);
+});
+
 
 
 bubble_btn.addEventListener("click", function(array){
@@ -95,10 +130,18 @@ bubble_btn.addEventListener("click", function(array){
     console.log(sorted_array);
     
 });
-selection_btn.addEventListener("click", function(array){
-    selectionSort(unsorted_array);
+
+insertion_btn.addEventListener('click', function(array){
+   let sorted_array =  insertionSort(unsorted_array);
     console.log(sorted_array);
 });
+
+selection_btn.addEventListener("click", function(){
+    let sorted_array = selectionSort(unsorted_array);
+    console.log(sorted_array);
+});
+
+
 
 
 
