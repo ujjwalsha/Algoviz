@@ -9,7 +9,7 @@ async function selectionSort(array){
 
         let minIndex = i;
       
-        bars[i].style.background = "cyan"; 
+        bars[i].style.background = "green"; 
 
         for(let j = i+1; j < array.length; j++)
         {

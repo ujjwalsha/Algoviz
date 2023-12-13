@@ -16,7 +16,7 @@ let insertion_btn = document.getElementById('insertion-sort');
 
 
 
-let min = 5;
+let min = 2;
 let max = mySlider.value;
 
 let numOfBars = mySlider.value;
@@ -66,9 +66,9 @@ function renderBars(array){
         bar.classList.add("bar");
         bar.style.width = "2em";
         bar.innerHTML = array[i];
-        bar.style.cssText = "color: blanchedalmond; padding: 0.5em; font-size:2em; transition: height 0.6s ease-in-out;";
+        bar.style.cssText = "color: blanchedalmond; padding: 0.5em; font-size:1.2em; transition: height 0.6s ease-in-out;";
         bar.style.border = "2px solid blanchedalmond";
-        bar.style.height = array[i]*25 + "px";
+        bar.style.height = array[i]*20 + "px";
         containerBox.appendChild(bar);
     }    
     // array.length = mySlider.value;
