@@ -1,9 +1,8 @@
 async function selectionSort(array){
-    disable_input();
     console.log('in selection sort');
 
     let bars = document.querySelectorAll(".bar");
-    for(let i = 0; i < array.length-1; i++)
+    for(let i = 0; i <= array.length-1; i++)
     {
         console.log("in ith loop");
 
@@ -23,7 +22,7 @@ async function selectionSort(array){
             {
                 if(minIndex != i)
                 {
-                    bars[minIndex].style.background = "yellow";
+                    bars[minIndex].style.background = "lightgreen";
                 }
                
                minIndex = j;
@@ -32,7 +31,7 @@ async function selectionSort(array){
 
             }
             else{
-                bars[j].style.background = 'yellow';
+                bars[j].style.background = 'transparent';
             }
 
            
@@ -58,7 +57,7 @@ async function selectionSort(array){
        
     }
 
-    enable_input();
+
 
     return array;   
 }

@@ -43,6 +43,58 @@ mySlider.addEventListener("input", () => {
 //     y.style.height = temp;
 // }
 
+function disableSortingBtn(){
+    bubble_btn.disabled = true;
+    selection_btn.disabled = true;
+    insertion_btn.disabled = true;
+}
+
+
+
+
+function enableSortingBtn(){
+    bubble_btn.disabled = false;
+    selection_btn.disabled = false;
+    insertion_btn.disabled = false;
+}
+
+function disableSizeSlider(){
+    mySlider.disabled = true;
+}
+
+function enableSizeSlider(){
+    mySlider.disabled = false;
+}
+
+function disableNewArray(){
+    randomArray.disabled = true;
+}
+
+function enableNewArray(){
+    randomArray.disabled = false;
+}
+
+
+// function disable_input(){
+//     let x = document.getElementsByTagName('input');
+//     for(let i = 0; i < x.length; i++)
+//     {
+//         x[i].disabled = true;
+//     }
+// }
+
+
+// function enable_input(){
+//     let x = document.getElementsByTagName('input');
+//     for(let i = 0; i < x.length; i++)
+//     {
+//         x[i].disabled = false;
+//     }
+// }
+
+
+
+
 //generate random number
 function randomNum(min, max){
     max = mySlider.value;
@@ -79,34 +131,19 @@ function renderBars(array){
 
 // create event on clicking new array button
 randomArray.addEventListener("click", function(array){
+    enableSortingBtn();
+    enableSizeSlider();
     createRandomArray();
     containerBox.innerHTML = "";
-    renderBars(unsorted_array);    
+    renderBars(unsorted_array);   
+    
+    
 });
 
 
 function sleep(ms){
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-
-function disable_input(){
-    let x = document.getElementsByTagName('input');
-    for(let i = 0; i < x.length; i++)
-    {
-        x[i].disabled = true;
-    }
-}
-
-
-function enable_input(){
-    let x = document.getElementsByTagName('input');
-    for(let i = 0; i < x.length; i++)
-    {
-        x[i].disabled = false;
-    }
-}
-
 
 
 function waitforme(millisec) { 
@@ -120,24 +157,47 @@ let delay = 100;
 
 mySlider2.addEventListener("input", () => {
     value1.innerText = mySlider2.value;
-    delay = 320 - parseInt(mySlider2.value);
+    delay = 60 - parseInt(mySlider2.value);
 });
 
+console.log(delay);
 
 
-bubble_btn.addEventListener("click", function(array){
-    let sorted_array = bubbleSort(unsorted_array);
-    console.log(sorted_array);
+
+bubble_btn.addEventListener("click", async function(array){
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArray();
+    await bubbleSort(unsorted_array);
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArray();
     
 });
 
-insertion_btn.addEventListener('click', function(array){
-   let sorted_array =  insertionSort(unsorted_array);
-    console.log(sorted_array);
+
+
+insertion_btn.addEventListener('click', async function(array){
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArray();
+   await insertionSort(unsorted_array);
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArray();
+
+
 });
 
-selection_btn.addEventListener("click", function(){
-    let sorted_array = selectionSort(unsorted_array);
+
+selection_btn.addEventListener("click", async function(array){
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArray();
+    await selectionSort(unsorted_array);
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArray();
     console.log(sorted_array);
 });
 
