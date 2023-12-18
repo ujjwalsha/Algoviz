@@ -24,6 +24,34 @@
     color: blanchedalmond;
 }
 
+/* changes */
+.popup{
+    position: absolute;
+    border: 1px solid coral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    border-radius: 0.5em;
+    background-color: var(--background-color);
+}
+
+.content{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content video{
+    height: 60vh;
+    width: 60vw;
+}
+
+
+/* changes */
 
 .nav-bar {
     margin: 1em 5em;

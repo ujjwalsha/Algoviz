@@ -13,6 +13,7 @@ let bubble_btn = document.getElementById("bubble-sort");
 let selection_btn = document.getElementById('selection-sort');
 let insertion_btn = document.getElementById('insertion-sort');
 // let delayElement = document.querySelector("#speed_input");
+document.querySelector('video').playbackRate = 2.5;
 
 
 
