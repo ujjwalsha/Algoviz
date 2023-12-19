@@ -1,3 +1,15 @@
+window.addEventListener('load', () => {
+    setTimeout(
+        function open(e){
+            popup.style.display="block";
+            // popup.style.filter = "blur(10px)";
+        },
+        100
+    );
+});
+
+
+
 // for slider
 let mySlider = document.querySelector("#input");
 let mySlider2 = document.querySelector("#range");
@@ -13,9 +25,9 @@ let bubble_btn = document.getElementById("bubble-sort");
 let selection_btn = document.getElementById('selection-sort');
 let insertion_btn = document.getElementById('insertion-sort');
 // let delayElement = document.querySelector("#speed_input");
-// document.querySelector('video').playbackRate = 2.5;
-
-
+document.querySelector('video').playbackRate = 2.5;
+let Popup_close = document.querySelector('#close');
+let popup = document.querySelector('.popup');
 
 let min = 2;
 let max = mySlider.value;
@@ -28,6 +40,13 @@ let unsorted_array = new Array(numOfBars);
 //this rendering on display on everytime you are refeshing the page
 createRandomArray();
 renderBars(unsorted_array);
+
+Popup_close.addEventListener('click', () =>{
+    popup.style.display = "none";
+    popup.style.transform = "translateY(10%)"
+});
+
+
 
 
 mySlider.addEventListener("input", () => {
@@ -119,7 +138,7 @@ function renderBars(array){
         bar.classList.add("bar");
         bar.style.width = "2em";
         bar.innerHTML = array[i];
-        bar.style.cssText = "color: blanchedalmond; padding: 0.5em; font-size:1.2em; transition: height 0.6s ease-in-out;";
+        bar.style.cssText = "color: blanchedalmond; padding: 0.5em; font-size:1.2em; transition: height 0.6s ease-in-out; @media screen (max-width:480px){font-size: 0.5em;}" ;
         bar.style.border = "2px solid blanchedalmond";
         bar.style.height = array[i]*20 + "px";
         containerBox.appendChild(bar);
