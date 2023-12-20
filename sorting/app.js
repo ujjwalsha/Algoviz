@@ -18,7 +18,7 @@ let value = document.querySelector(".result");
 let value1 = document.querySelector(".resultSpeed");
 
 
-let block = document.querySelector('.sortBars');
+let block = document.querySelector('.bar');
 let containerBox = document.querySelector('.flex-container');
 let randomArray = document.getElementById('random-array');
 let bubble_btn = document.getElementById("bubble-sort");
@@ -144,10 +144,26 @@ function renderBars(array){
         containerBox.appendChild(bar);
     }    
     // array.length = mySlider.value;
-    
-
-    
 }
+
+
+const media = () => {
+    let q = matchMedia("(max-width: 480px)");
+
+    if(q.matches){
+        document.querySelector(".bar").style.width = "1em";
+
+    }
+    else{
+        document.querySelector(".bar").style.width = "2em";
+
+    }
+
+}
+
+onload = media;
+
+
 
 // create event on clicking new array button
 randomArray.addEventListener("click", function(array){
