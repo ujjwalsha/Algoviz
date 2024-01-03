@@ -13,10 +13,11 @@
     <div id="wrapper">
         <div class="container">
             <h2>Contact Us</h2>
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="25165015-6875-43bd-8e41-b67023f5a059">
                 <input type="text" id="name" placeholder="Enter your name" required>
-                <input type="text" id="email" placeholder="your Gmail address" required>
-                <input type="text" id="phone" placeholder="phone number" required>
+                <input type="email" id="email" placeholder="your Gmail address" required>
+                <!-- <input type="text" id="phone" placeholder="phone number" required> -->
                 <textarea name="" id="message" cols="30" rows="10" placeholder="How can i help you ......."></textarea>
                 <button type="submit" class="btn">Submit</button>
             </form>
@@ -25,25 +26,6 @@
         </div>
     </div>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <script>
-
-        function sendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "ujjwalunforgettable@gmail.com",
-    Password : "ujjwal@llen",
-    To : 'ujjwalkumararch@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : " New contact form enquiry",
-    Body : "And this is the body"
-    }).then(
-    message => alert(message)
-    );
- }
-
-    </script>
     
 </body>
 </html>
