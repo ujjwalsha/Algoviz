@@ -84,6 +84,16 @@
   align-items: center;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  display: none;
+}
+
 .logo-container h2 {
   font-size: 2em;
   cursor: pointer;
@@ -133,16 +143,17 @@
   }
 
   .logo-container {
+    width: 90%;
+
     position: absolute;
-    left: 0;
-    width: 50%;
+    left: 0.1em;
+    top: 1.5em;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .icon {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
-    top: 1em;
-    margin-left: -1em;
-    margin-top: 1em;
   }
 
   .nav-bar {
@@ -209,9 +220,7 @@
     font-size: 2em;
     color: blanchedalmond;
     cursor: pointer;
-    position: fixed;
     top: 7%;
-    /* z-index: -1; */
     right: 6%;
   }
 
