@@ -32,13 +32,11 @@
       <div class="nav-bar">
         <div class="logo-container">
           <h2>Vrittiviz</h2>
+
+          <i class="fa-solid fa-bars menu"></i>
         </div>
 
         <div class="menu-wrap">
-          <!-- <input type="checkbox" class="toggler"> -->
-          <div class="hamburger"><div></div></div>
-          <!-- kjfksd -->
-          <!-- this is changes happen absolutly best-->
           <div class="nav-items" class="menu">
             <a href="index.html">Home</a>
             <a href="sorting/sorting.html">Sorting</a>
@@ -58,6 +56,26 @@
         typeSpeed: 100,
         backSpeed: 100,
         loop: true,
+      });
+
+      const menubtn = document.querySelector(".menu");
+      let menuwrap = document.querySelector(".menu-wrap");
+      let button = document.querySelector(".fa-xmark");
+      let navItem = document.querySelector(".nav-items");
+      menubtn.addEventListener("click", () => {
+        menubtn.classList.toggle("fa-xmark");
+        menuwrap.style.display = "flex";
+
+        if (menubtn.classList.contains("fa-xmark")) {
+          menubtn.addEventListener("click", () => {
+            menuwrap.style.display = "none";
+          });
+        } else {
+          menubtn.addEventListener("click", () => {
+            menuwrap.style.display = "flex";
+            navItem.style.transition = "all 0.5s ease";
+          });
+        }
       });
     </script>
   </body>
