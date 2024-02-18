@@ -177,7 +177,6 @@
     display: grid;
     z-index: 1;
     margin-left: 2.5em;
-    transition: all 0.5s ease;
   }
 
   .content {
@@ -186,9 +185,6 @@
 
   .content h1 {
     font-size: 2.6em;
-
-    /* text-decoration: underline; */
-    /* padding: 0; */
   }
 
   .content p {
