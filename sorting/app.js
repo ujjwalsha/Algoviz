@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   setTimeout(function open(e) {
     popup.style.display = "block";
-  }, 100);
+  }, 50);
 });
 
 // for slider
@@ -17,7 +17,6 @@ let randomArray = document.getElementById("random-array");
 let bubble_btn = document.getElementById("bubble-sort");
 let selection_btn = document.getElementById("selection-sort");
 let insertion_btn = document.getElementById("insertion-sort");
-// let delayElement = document.querySelector("#speed_input");
 document.querySelector("video").playbackRate = 2.5;
 let Popup_close = document.querySelector("#close");
 let popup = document.querySelector(".popup");
