@@ -1,3 +1,6 @@
+"use strict";
+
+//popup load while window loading
 window.addEventListener("load", () => {
   setTimeout(function open(e) {
     popup.style.display = "block";
@@ -7,10 +10,8 @@ window.addEventListener("load", () => {
 // for slider
 let mySlider = document.querySelector("#input");
 let mySlider2 = document.querySelector("#range");
-
 let value = document.querySelector(".result");
 let value1 = document.querySelector(".resultSpeed");
-
 let block = document.querySelector(".bar");
 let containerBox = document.querySelector(".flex-container");
 let randomArray = document.getElementById("random-array");
@@ -39,8 +40,8 @@ Popup_close.addEventListener("click", () => {
   popup.style.transform = "translateY(10%)";
 });
 
+//responsive for popup error for slider
 let x = window.matchMedia("(max-width: 480px)");
-
 mySlider.addEventListener("input", () => {
   value.innerText = mySlider.value;
   if (x.matches && mySlider.value > 10) {
@@ -191,5 +192,5 @@ selection_btn.addEventListener("click", async function (array) {
   enableSortingBtn();
   enableSizeSlider();
   enableNewArray();
-  console.log(sorted_array);
+  // console.log(sorted_array);
 });
