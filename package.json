@@ -1,0 +1,22 @@
+{
+  "name": "vrittiviz",
+  "productName": "vrittiviz inc.",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package-win": "electron-packager . vrittiviz --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"vrittiviz\""
+  },
+  "author": "ujjwal sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.4",
+    "electron-packager": "^17.1.2",
+    "tailwindcss": "^3.4.3"
+  },
+  "build": {
+    "appId": "com.Egghead.vrittiviz"
+  }
+}

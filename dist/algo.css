@@ -1,0 +1,215 @@
+.animation {
+  background-size: 40px 40px;
+
+  animation: move 5000ms linear infinite;
+  background-image: radial-gradient(circle, grey 1px, transparent 1px);
+}
+
+/* @keyframes move {
+  0% {
+    background-position: 5em;
+  }
+  100% {
+    background-position: left;
+  }
+} */
+
+.blockContainer {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+  grid-template-columns: repeat(17, 1fr);
+  gap: 0.5em;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.effect {
+  transition: all 0.35s;
+}
+
+.expand {
+  transition: all 0.5s ease-in-out;
+
+  /* transform: translateY(-3px); */
+}
+
+.effect:hover {
+  z-index: 1;
+  transform: scale(1.05);
+}
+
+.operation {
+  transition: all 0.5s ease-in;
+}
+
+.scaleitem {
+  transition: all 1.5s ease-in-out;
+  animation: animate 1.5s 1;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes animateitem {
+  0% {
+    transform: scaleZ(0);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* .hidden {
+  display: none;
+} */
+
+.midelement {
+  background-color: gray;
+}
+
+.show {
+  opacity: 1;
+}
+
+button:hover {
+  background-color: rgb(255, 250, 240);
+  transform: translateZ(10%);
+  transform: scale(0.98);
+}
+
+.animate {
+  transition: all 1s ease-in;
+  transform: scale(0.98);
+  width: fit-content;
+  display: flex;
+  font-size: 1.2em;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  animation: moveing 1s 1;
+}
+
+@keyframes moveing {
+  0% {
+    transform: translateX(1px), scale(0);
+    /* left: 1em; */
+    font-size: 1em;
+  }
+  25% {
+    transform: translateX(20px), scale(3);
+    /* font-size: 1.5em; */
+    /* left: 1.5em; */
+  }
+
+  100% {
+    transform: translateX(1px), scale(1);
+    font-size: 1em;
+  }
+}
+
+.high {
+  background-color: green;
+}
+
+.mid {
+  background-color: gray;
+}
+
+.found {
+  background-color: blue;
+}
+
+.hidden {
+  display: none;
+}
+
+.low {
+  background-color: red;
+}
+
+.highlight {
+  background-color: rgb(140, 140, 140);
+}
+
+.rotate {
+  transition: all 1s;
+  animation: rotate 1s 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}

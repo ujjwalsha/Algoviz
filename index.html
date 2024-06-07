@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="dist/style.css" />
     <title>Vrittiviz</title>
     <link
       rel="stylesheet"
@@ -15,11 +16,13 @@
   </head>
   <body>
     <!-- wrappper start from here -->
-    <div id="wrapper">
+    <div id="wrapper" class="bg-slate-200 font-medium homePage">
       <div class="video-container">
-        <video src="algo.mp4" autoplay muted loop></video>
+        <video src="dist/algo.mp4" autoplay muted loop></video>
         <div class="content">
-          <h1>Welcome to the <span class="sec-text"></span></h1>
+          <h1 class="font-bold">
+            Welcome to the <span class="sec-text"></span>
+          </h1>
           <p>
             Step into the world of Vritti(algorithms) with the Algorithm
             Visualizer--an interactive online platform that transforms code into
@@ -33,7 +36,7 @@
       <div class="nav-bar">
         <div class="logo-container">
           <div class="logo">
-            <h2>Vrittiviz</h2>
+            <h2 class="font-bold">Vrittiviz</h2>
           </div>
           <div class="icon">
             <i class="fa-solid fa-bars menu"></i>
@@ -42,43 +45,49 @@
 
         <div class="menu-wrap">
           <div class="nav-items" class="menu">
-            <a href="index.html">Home</a>
-            <a href="sorting/sorting.html">algorithms</a>
-            <a href="aboutme/aboutme.html">About us</a>
+            <a href="index.html" class="font-bold">Home</a>
+            <a href="dist/algorithm.html">Algorithms</a>
+            <a href="Aboutme/aboutme.html">About us</a>
             <a href="contact/contact.html">Contact</a>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- algorithms section -->
+    <!-- <div class="algorithms bg-black">this is ujjwal kumar</div> -->
+
     <!-- script file and code -->
-    <script src="algorithms/app.js"></script>
+    <script src="clone.js"></script>
+    <script defer src="dist/app.js"></script>
+    <script src="dist/binary/binary.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
       //for typing heading
-      var typed = new Typed(".sec-text", {
-        strings: ["Algorithm Visualizer", "creativity", "Programming"],
+      var typed = new Typed('.sec-text', {
+        strings: ['Algorithm Visualizer', 'creativity', 'Programming'],
         typeSpeed: 100,
         backSpeed: 100,
         loop: true,
       });
 
-      const menubtn = document.querySelector(".menu");
-      let menuwrap = document.querySelector(".menu-wrap");
-      let button = document.querySelector(".fa-xmark");
-      let navItem = document.querySelector(".nav-items");
-      menubtn.addEventListener("click", () => {
-        menubtn.classList.toggle("fa-xmark");
-        menuwrap.style.display = "flex";
+      const menubtn = document.querySelector('.menu');
 
-        if (menubtn.classList.contains("fa-xmark")) {
-          menubtn.addEventListener("click", () => {
-            menuwrap.style.display = "none";
+      let menuwrap = document.querySelector('.menu-wrap');
+      let button = document.querySelector('.fa-xmark');
+      let navItem = document.querySelector('.nav-items');
+      menubtn.addEventListener('click', () => {
+        menubtn.classList.toggle('fa-xmark');
+        menuwrap.style.display = 'flex';
+
+        if (menubtn.classList.contains('fa-xmark')) {
+          menubtn.addEventListener('click', () => {
+            menuwrap.style.display = 'none';
           });
         } else {
-          menubtn.addEventListener("click", () => {
-            menuwrap.style.display = "flex";
-            navItem.style.transition = "all 0.5s ease";
+          menubtn.addEventListener('click', () => {
+            menuwrap.style.display = 'flex';
+            navItem.style.transition = 'all 0.5s ease';
           });
         }
       });

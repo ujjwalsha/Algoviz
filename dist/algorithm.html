@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vrittiviz</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="algo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="wrapper animation bg-vrittiBg text-vrittiText">
+    <!-- global container -->
+    <div
+      class="flex sm:fixed sm:top-5 sm:z-10 sm:w-11/12 sm:border sm:p-5 sm:left-5 font-bold lg:m-auto lg:left-16 lg:p-4 cursor-pointer rounded-md text-2xl backdrop-blur-md justify-between gap-10"
+    >
+      <div
+        class="backbutton p-2 w-10 flex items-center bg-vrittiText text-vrittiBg justify-center px-1 rounded-full"
+      >
+        <i class="fa-solid fa-chevron-up fa-rotate-270"></i>
+      </div>
+      <div class="">
+        <h2
+          class="font-bold uppercase sm:tracking-tight tracking-wide lg:tracking-wider"
+        >
+          Algorithms
+        </h2>
+      </div>
+    </div>
+
+    <!-- algorithm cards-->
+    <div
+      class="md:mt-72 sm:mt-40 lg:mt-40 flex items-center justify-center h-vrittiH"
+    >
+      <div
+        class="grid sm:mt-96 sm:translate-y-36 lg:translate-y-0 cursor-pointer grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-3 place-content-center m-5 items-center justify-center"
+      >
+        <!-- sorting -->
+        <div
+          class="opener sm:w-fit lg:w-vrittiw effect w-vrittiw border backdrop-blur-vritti rounded-md border-dotted p-4"
+        >
+          <video class="sorting" src="demo.mkv" autoplay muted loop></video>
+
+          <div
+            class="flex items-center backdrop-blur-sm justify-between text-center align-middle expandable"
+          >
+            <p class="font-bold text-2xl">Sorting</p>
+            <i
+              class="fa-solid fa-angle-down text-2xl font-bold border p-1 rounded-lg"
+            ></i>
+          </div>
+
+          <p
+            class="hidden content1 text-xl text-justify backdrop-blur-sm pt-2 answer"
+          >
+            sorting: to arrange the element in ascending and descending order
+            so, that's why we are good at programming
+          </p>
+        </div>
+
+        <!-- searching -->
+        <div
+          class="opener sm:w-fit effect lg:w-vrittiw border backdrop-blur-vritti rounded-md border-dotted p-4"
+        >
+          <!-- <video src="demo.mkv" autoplay muted loop></video> -->
+          <img
+            src="assets/binarysearch.png"
+            alt=""
+            class="searching bg-vrittiText h-52 w-full"
+          />
+
+          <div
+            class="flex items-center pt-3 backdrop-blur-sm justify-between text-center align-middle expandable"
+          >
+            <p class="font-bold text-2xl">Searching</p>
+            <i
+              class="fa-solid fa-angle-down text-2xl font-bold border p-1 rounded-lg"
+            ></i>
+          </div>
+
+          <p
+            class="hidden content2 text-xl text-justify backdrop-blur-sm pt-2 answer"
+          >
+            Binary Search is defined as a searching algorithm used in a sorted
+            array by repeatedly dividing the search interval in half.
+          </p>
+        </div>
+
+        <!-- analyzer -->
+        <div
+          class="Analiyzer sm:w-fit opener effect lg:w-vrittiw border backdrop-blur-vritti rounded-md border-dotted p-4"
+        >
+          <video src="demo.mkv" autoplay muted loop></video>
+          <div
+            class="flex items-center backdrop-blur-sm justify-between text-center align-middle expandable"
+          >
+            <p class="font-bold text-2xl">Analiyzer</p>
+            <i
+              class="fa-solid fa-angle-down text-2xl font-bold border p-1 rounded-lg"
+            ></i>
+          </div>
+
+          <p
+            class="hidden content3 text-xl text-justify backdrop-blur-sm pt-2 answer"
+          >
+            Binary Search is defined as a searching algorithm used in a sorted
+            array by repeatedly dividing the search interval in half.
+          </p>
+        </div>
+
+        <!-- prime number visualizer -->
+        <div
+          class="Analiyzer sm:w-fit opener effect lg:w-vrittiw border backdrop-blur-vritti rounded-md border-dotted p-4"
+        >
+          <img src="assets/prime.png" class="" alt="prime number" />
+          <div
+            class="flex items-center backdrop-blur-sm justify-between text-center align-middle expandable"
+          >
+            <p class="font-bold text-2xl">Prime Number</p>
+            <i
+              class="fa-solid fa-angle-down text-2xl font-bold border p-1 rounded-lg"
+            ></i>
+          </div>
+
+          <p
+            class="hidden content3 text-xl text-justify backdrop-blur-sm pt-2 answer"
+          >
+            Visualize how sieve is better than brute force.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vrittiviz</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- changes -->
+      <div class="popup">
+        <div class="content">
+          <h2>Let's play with Algorithm</h2>
+          <video src="demo.mkv" autoplay muted loop></video>
+          <button id="close">Let's Go</button>
+        </div>
+      </div>
+
+      <div class="better-view">
+        <div class="match-popup">
+          <h2>For better view, open in bigger screen💻</h2>
+          <button class="close">Okay</button>
+        </div>
+      </div>
+
+      <!-- changes -->
+      <div class="nav-bar">
+        <h2>Sorting Visualizer</h2>
+        <button back>back</button>
+      </div>
+
+      <div class="container">
+        <div class="newArray">
+          <button id="random-array">New Array</button>
+        </div>
+
+        <div class="col">
+          <span id="size"
+            >Size
+            <input
+              id="input"
+              type="range"
+              min="10"
+              max="50"
+              step="1"
+              value="0"
+            />
+            <div class="result">50</div>
+          </span>
+
+          <span id="speed"
+            >Speed
+            <input
+              id="range"
+              type="range"
+              min="5"
+              max="50"
+              stepDown="10"
+              step="1"
+              value="0"
+            />
+            <div class="resultSpeed">50</div>
+          </span>
+        </div>
+
+        <div class="sort">
+          <div class="bubbleSort">
+            <button id="bubble-sort">Bubble</button>
+          </div>
+
+          <div class="insertionSort">
+            <button id="insertion-sort">Insertion</button>
+          </div>
+
+          <div class="selectionSort">
+            <button id="selection-sort">Selection</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="bars" class="flex-container">
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="bubble.js"></script>
+    <script src="insertion.js"></script>
+    <script src="selection.js"></script>
+  </body>
+</html>
