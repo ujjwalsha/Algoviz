@@ -43,7 +43,7 @@ function targetFound(index, child) {
   child[index].classList.add('found');
 }
 
-function removeElementsBefore(index, right) {
+function removeElementsBefore(arrayElements, index, right) {
   for (let i = 0; i < index; i++) {
     arrayElements[i].remove();
   }
@@ -51,7 +51,7 @@ function removeElementsBefore(index, right) {
 }
 
 // Function to remove elements after the given index
-function removeElementsAfter(index, left) {
+function removeElementsAfter(arrayElements, index, left) {
   for (let i = arrayElements.length - 1; i > index; i--) {
     arrayElements[i].remove();
   }
@@ -66,5 +66,38 @@ function removeElements(left, right) {
 }
 
 function disabledLinear() {
+  linearSearch.disabled = true;
+  linearSearch.style.cursor = 'not-allowed';
+}
+
+function enabledLinear() {
   linearSearch.disabled = false;
+  linearSearch.style.cursor = 'default';
+}
+
+function disabledFunction() {
+  randomNum.disabled = true;
+  randomNum.style.cursor = 'not-allowed';
+}
+
+disabledFunction();
+
+function enabledFunction() {
+  randomNum.disabled = false;
+  randomNum.style.cursor = 'default';
+}
+
+let listItem = document.querySelectorAll('.required-field');
+
+for (let i = 0; i < listItem.length; i++) {
+  listItem[i].addEventListener('keyup', function (e) {
+    // console.log(e);
+
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      if (this.parentElement.nextElementSibling.querySelector('input')) {
+        this.parentElement.nextElementSibling.querySelector('input').focus();
+      }
+    }
+  });
 }

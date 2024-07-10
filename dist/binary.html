@@ -59,13 +59,15 @@
         <button class="binarysearch rounded-md p-2 bg-vrittiText text-vrittiBg">
           Binary Search
         </button>
-        <button class="linear-search rounded-md p-2 bg-vrittiText text-vrittiBg">
+        <button
+          class="linear-search rounded-md p-2 bg-vrittiText text-vrittiBg"
+        >
           Linear Search
         </button>
       </div>
     </div>
 
-    <div
+    <!-- <div
       class="welcome-display relative flex w-10/12 m-auto mt-10 flex-col justify-center items-center gap-10"
     >
       <h2 class="font-semibold text-4xl font"><span class="wave">👋</span>Hii there, Welcome!</h2>
@@ -90,83 +92,119 @@
         <p class="bg-gray-800 rounded-md p-2 text-xl">U <span class="text-xl">- for user input</span></p>
         
       </div>
-    </div>
-
+    </div> -->
+    <!-- 
     <div class="more-detail absolute top-52 backdrop-blur-md w-6/12 rounded-lg border  m-auto right-96  p-10 flex flex-col gap-10">
      <span class=" flex justify-end"><i class="fa-solid fa-xmark relative bg-slate-800 cancel-btn p-3 cursor-pointer rounded-full "></i></span> 
       <p class=" flex text-justify text-lg p-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius neque sit temporibus quas? Animi officiis quam iure fuga aspernatur id voluptatibus, distinctio ducimus ad eum rem blanditiis eligendi tempore numquam?</p>
-    </div>
+    </div> -->
 
     <div
-      class="w-11/12 randomDisplay m-auto h-3/6 gap-5 mt-10  text-center flex flex-col justify-center"
+      class="w-11/12 randomDisplay m-auto h-3/6 gap-5 mt-10 text-center flex flex-col justify-center"
     >
       <!-- <p class="mt-2">this is</p> -->
-      <div class="inputcontainer md:grid md:grid-cols-3 md:gap-5 lg:flex lg:gap-5  justify-center">
-        <input
-          type="number"
-          placeholder="lower number"
-          class="lower inputField bg-gray-700 w-40 h-14 rounded-md text-xl p-2 text-vrittiText"
-        />
+      <div
+        class="inputcontainer md:grid md:grid-cols-3 md:gap-5 lg:flex lg:gap-5 justify-center"
+      >
+        <div class="group">
+          <input
+            type="number"
+            placeholder="lower number"
+            class="lower inputField required-field bg-gray-700 w-40 h-14 rounded-md text-xl p-2 text-vrittiText"
+          />
+        </div>
 
-        <input
-          type="number"
-          placeholder="upper number"
-          class="upper inputField bg-gray-700 w-40 h-14 rounded-md text-xl p-1 text-vrittiText"
-        />
+        <div class="group">
+          <input
+            type="number"
+            placeholder="upper number"
+            class="upper inputField required-field bg-gray-700 w-40 h-14 rounded-md text-xl p-1 text-vrittiText"
+          />
+        </div>
 
-        <input
-          type="number"
-          placeholder="target"
-          class="target inputField bg-gray-700 w-40 h-14 rounded-md text-xl p-1 text-vrittiText"
-        />
-        <button class="searching rounded-md cursor-pointer p-3 hover:bg-gray-600 bg-slate-700 ">Go</button>
-        <span id="size" class="flex justify-center items-center gap-5 text-xl font-semibold">Speed
-        <input
-          id="input"
-          type="range"
-          min="10"
-          max="50"
-          step="1"
-          value="0" class="w-40"
-        />
-        <div class="result">50</div>
-      </span>
+        <div class="group">
+          <input
+            type="number"
+            placeholder="target"
+            class="target inputField required-field bg-gray-700 w-40 h-14 rounded-md text-xl p-1 text-vrittiText"
+          />
+        </div>
+
+        <button
+          class="searching rounded-md cursor-pointer p-3 hover:bg-gray-600 bg-slate-700"
+        >
+          Go
+        </button>
+        <span
+          id="size"
+          class="flex justify-center items-center gap-5 text-xl font-semibold"
+          >Speed
+          <input
+            id="input"
+            type="range"
+            min="10"
+            max="50"
+            step="1"
+            value="0"
+            class="w-40"
+          />
+          <div class="result">50</div>
+        </span>
       </div>
-      <div class="text-center mt-5 flex  flex-col items-center gap-5 justify-center">
+      <div
+        class="text-center active mt-5 flex flex-col items-center gap-5 justify-center"
+      >
         <div
           class="operation flex justify-center text-gray-300 items-center w-72 h-12 rounded-md border text-center"
-        >Operation performed</div>
+        >
+          Operation performed
+        </div>
         <div class="time-complexity-binary m-auto mt-5 animate-pulse"></div>
-
       </div>
-      <div class="blockContainer "></div>
-     
-
-     
+      <div class="blockContainer"></div>
+      <div class="time-complexity-random m-auto mt-20 animate-pulse"></div>
     </div>
 
-    <div class="user-input-display w-11/12 h-52 m-auto flex flex-col mt-10  ">
-      <div class="flex  flex-row  justify-center ">
-        <div class="flex flex-col gap-1 input w-96 ">
-        <input type="text" placeholder="enter your number" class="user-input bg-gray-700 w-3/4 h-14 rounded-md text-xl p-1 text-vrittiText">
+    <div class="user-input-display w-11/12 h-52 m-auto flex flex-col mt-10">
+      <div class="flex flex-row justify-center">
+        <div class="flex flex-col gap-1 input w-96">
+          <input
+            type="text"
+            placeholder="enter your number"
+            class="user-input bg-gray-700 w-3/4 h-14 rounded-md text-xl p-1 text-vrittiText"
+          />
         </div>
         <div class="flex gap-5">
-          <input type="number" class="user-target bg-gray-700 w-40 h-14 rounded-md text-xl p-1 text-vrittiText" placeholder="target">
-        <button class=" rounded-md cursor-pointer check p-3 hover:bg-gray-600 bg-slate-700 ">Go</button>
-
+          <input
+            type="number"
+            class="user-target bg-gray-700 w-40 h-14 rounded-md text-xl p-1 text-vrittiText"
+            placeholder="target"
+          />
+          <button
+            class="rounded-md cursor-pointer check p-3 hover:bg-gray-600 bg-slate-700"
+          >
+            Go
+          </button>
         </div>
-        
       </div>
 
-        <div class="extra-block-container flex flex-row justify-center  gap-2 mt-20">
-        
+      <div class="flex justify-center m-8">
+        <div
+          class="user-operation flex justify-center text-gray-300 items-center w-72 h-12 rounded-md border text-center"
+        >
+          Operation performed
         </div>
-        <div class="time-complexity m-auto mt-20 animate-pulse"></div>
+      </div>
+
+      <div
+        class="extra-block-container flex flex-row justify-center gap-2 mt-20"
+      ></div>
+      <div class="time-complexity m-auto mt-20 animate-pulse"></div>
     </div>
 
     <!-- container for visualize binary search  -->
-    <script defer src="binary/binary.js" ></script>
-    <script src="binary/binaryFunction.js" ></script>
+    <script defer src="binary/binary.js"></script>
+    <script src="binary/binaryFunction.js"></script>
     <script src="binary/utilities.js"></script>
   </body>
 </html>

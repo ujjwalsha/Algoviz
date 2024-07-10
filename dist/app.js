@@ -8,6 +8,8 @@ const openerSlide = document.querySelectorAll('.opener');
 const searchingBtn = document.querySelector('.searching');
 const expandable = document.querySelectorAll('.expandable');
 
+searchingBtn.playbackRate = 2.5;
+
 function hidden() {}
 
 openerSlide.forEach(e => {

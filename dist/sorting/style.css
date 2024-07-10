@@ -30,6 +30,7 @@
   position: absolute;
   /* border: 1px solid coral; */
   display: none;
+  z-index: 1;
   height: 99.8vh;
   width: 99.9vw;
   backdrop-filter: blur(4px);
@@ -97,11 +98,27 @@
 /* changes */
 
 .nav-bar {
-  margin: 1em 5em;
+  margin: 1em 6em;
+  display: flex;
+  text-align: center;
+  gap: 1em;
+
   border-bottom: 3px solid blanchedalmond;
   @media (max-width: 480px) {
     border-bottom: 1px solid blanchedalmond;
   }
+}
+
+.back {
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 2.1em;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
 }
 
 .nav-bar h2 {
